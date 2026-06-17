@@ -5,12 +5,12 @@
   TO MAKE IT YOURS, replace the placeholders below:
    1. <title> and the meta description
    2. Brand initials in the nav  ........... "MC"
-   3. Hero name / role / tagline  .......... search "Maya Chen"
+   3. Hero name / role / tagline  .......... search "Ajay Prajapati"
    4. Stats strip numbers
    5. About paragraph + skill tags
    6. The six project cards (title, blurb, tags, links)
    7. Contact email + social links
-  Tip: do a find-and-replace for "Maya Chen" and "maya@" first.
+  Tip: do a find-and-replace for "Ajay Prajapati" and "ajay@" first.
   ============================================================
 -->
 <!DOCTYPE html>
