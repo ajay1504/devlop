@@ -1,37 +1,45 @@
 name: Portfolio
+
 on:
   push:
     branches: [master]
-  workflow_dispatch:  
+  workflow_dispatch:
 
 permissions:
+  contents: read
   pages: write
   id-token: write
 
+# Only ever allow one Pages run at a time. A newer run cancels an
+# in-progress one, so two artifacts can never collide on deploy.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  # ---- build: package the site into a single Pages artifact ----
+  build:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.url }}
-
     steps:
-      # STEP 1: checkout the repo code
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      # STEP 2: configure GitHub Pages
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 
-      # STEP 3: upload static files as a Pages artifact
-      - name: Upload static files
+      - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
-      # STEP 4: deploy the artifact to GitHub Pages
+  # ---- deploy: publish that artifact to GitHub Pages ----
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
