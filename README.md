@@ -1,24 +1,9 @@
-<!--
-  ============================================================
-  GLASSMORPHISM PORTFOLIO — single file, no build step
-  ------------------------------------------------------------
-  TO MAKE IT YOURS, replace the placeholders below:
-   1. <title> and the meta description
-   2. Brand initials in the nav  ........... "MC"
-   3. Hero name / role / tagline  .......... search "Ajay Prajapati"
-   4. Stats strip numbers
-   5. About paragraph + skill tags
-   6. The six project cards (title, blurb, tags, links)
-   7. Contact email + social links
-  Tip: do a find-and-replace for "Ajay Prajapati" and "ajay@" first.
-  ============================================================
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Maya Chen — Product Designer</title>
+<title>Ajay Prajapati — Product Designer</title>
 <meta name="description" content="Product & interaction designer crafting calm, useful interfaces." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -191,7 +176,7 @@ footer .mono{font-family:var(--mono)}
 <!-- NAV -->
 <nav>
   <div class="nav-inner glass">
-    <span class="brand">MC</span>
+    <span class="brand">AP</span>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -206,7 +191,7 @@ footer .mono{font-family:var(--mono)}
   <div class="wrap">
     <div class="hero">
       <span class="eyebrow glass">Product &amp; Interaction Designer</span>
-      <h1>Hi, I'm <span class="grad">Maya Chen</span>. I design calm, useful interfaces.</h1>
+      <h1>Hi, I'm <span class="grad">Ajay Prajapati</span>. I design calm, useful interfaces.</h1>
       <p class="lead">I help teams turn messy problems into products people actually enjoy using — from first sketch to shipped pixel.</p>
       <div class="hero-actions">
         <a href="#work" class="btn btn-primary">View my work →</a>
@@ -324,7 +309,7 @@ footer .mono{font-family:var(--mono)}
 </section>
 
 <footer>
-  <div class="wrap"><span class="mono">© 2026 Maya Chen</span> · Designed &amp; built with care</div>
+  <div class="wrap"><span class="mono">© 2026 Ajay Prajapati</span> · Designed &amp; built with care</div>
 </footer>
 
 <script>
@@ -372,3 +357,16 @@ addEventListener('scroll',()=>{
 </script>
 </body>
 </html>
+
+<!--
+  ============================================================
+  TO MAKE IT YOURS, replace:
+   1. <title> and meta description
+   2. Brand initials in the nav ("MC")
+   3. Hero name / role / tagline (search "Ajay Prajapati")
+   4. Stats strip numbers
+   5. About paragraph + skill tags
+   6. The six project cards (title, blurb, tags, links)
+   7. Contact email + social links
+  ============================================================
+-->
