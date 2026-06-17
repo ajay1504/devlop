@@ -1,20 +1,18 @@
 name: CICD
-
 on:
   workflow_dispatch:
     inputs:
       environment:
-      discriptionn: this is the environment value where this workflow runs
-      default: 'dev'
-      required: true
-      type: choice
-      options:
-        - dev
-        - prod
-        - staging
-        
-jobs:
+        description: 'this is the environment value where this workflow runs'
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 
+jobs:
   code:
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Docker Container
-        run: echo "Docker Conatiner build"
+        run: echo "Docker Container build"
 
   test:
     needs: build
@@ -36,9 +34,9 @@ jobs:
         run: echo "Testing the container"
 
   deploy:
-    if: inputs.environment == 'dev'
-    neess: [build,test]
+    if: ${{ inputs.environment == 'dev' }}
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploying the app
-        run: echo "Docker compose deployed the app"        
+        run: echo "Docker compose deployed the app"
