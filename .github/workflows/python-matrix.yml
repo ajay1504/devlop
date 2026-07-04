@@ -2,7 +2,7 @@ name: Python lint
 
 on:
     push:
-        branches: [main]
+        branches: [master]
 
 jobs:
     validate:
