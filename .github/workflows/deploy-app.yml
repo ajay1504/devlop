@@ -17,3 +17,6 @@ jobs:
              run: |
                export DOCKERHUB_USER=${{ vars.DOCKERHUB_USER }}
                docker compose up -d --build
+
+           - name: Debug - show compose file content
+             run: cat docker-compose.yml
