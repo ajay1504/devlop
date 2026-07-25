@@ -13,10 +13,12 @@ jobs:
            - name: checkout code
              uses: actions/checkout@v4
 
+           - name: Debug - show compose file content
+             run: cat docker-compose.yml
+
            - name: Deploy with docker compose
              run: |
                export DOCKERHUB_USER=${{ vars.DOCKERHUB_USER }}
                docker compose up -d --build
 
-           - name: Debug - show compose file content
-             run: cat docker-compose.yml
+           
