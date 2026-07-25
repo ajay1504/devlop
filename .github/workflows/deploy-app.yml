@@ -19,6 +19,6 @@ jobs:
            - name: Deploy with docker compose
              run: |
                export DOCKERHUB_USER=${{ vars.DOCKERHUB_USER }}
-               docker compose up -d --build
+               docker compose down && docker compose up -d --build
 
            
